@@ -11,7 +11,7 @@
 
 ### `guest@pradheeban:~$ neofetch`
 
-**A Linux terminal-inspired developer portfolio — built with React 19, TypeScript & Tailwind CSS**
+**A Linux terminal-inspired developer portfolio built with React 19, TypeScript & Tailwind CSS**
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -28,7 +28,7 @@
 
 ## 📖 Overview
 
-Most developer portfolios look the same — hero section, projects grid, contact form. This one doesn't.
+Most developer portfolios look the same  hero section, projects grid, contact form. This one doesn't.
 
 **pradheeban.vercel.app** is a fully interactive, Linux terminal-style portfolio website. Instead of clicking through static pages, visitors explore my profile by running real terminal commands. It simulates a complete shell environment with a virtual filesystem, command history, tab autocomplete and multiple terminal themes.
 
@@ -49,12 +49,12 @@ Status       : Looking for reasons to hire
 ## ✨ Features
 
 ### 🖥️ Authentic Terminal Experience
-- **Realistic Linux shell simulation** — `ls`, `cd`, `cat`, `pwd`, `tree`, `whoami`, `neofetch`
-- **Virtual Filesystem (VFS)** — Navigate a fully functional in-memory filesystem
-- **Tab autocomplete** — Works exactly like a real shell (completes commands and file paths)
-- **Command history** — Arrow-key navigation through previous commands
-- **Multi-theme support** — `dracula`, `ubuntu`, `matrix`, `kali` — switch with `theme <name>`
-- **CRT scanline overlay** — Authentic retro-terminal visual effect
+- **Realistic Linux shell simulation**  `ls`, `cd`, `cat`, `pwd`, `tree`, `whoami`, `neofetch`
+- **Virtual Filesystem (VFS)**  Navigate a fully functional in-memory filesystem
+- **Tab autocomplete**  Works exactly like a real shell (completes commands and file paths)
+- **Command history**  Arrow-key navigation through previous commands
+- **Multi-theme support**  `dracula`, `ubuntu`, `matrix`, `kali`  switch with `theme <name>`
+- **CRT scanline overlay**  Authentic retro-terminal visual effect
 
 ### 🤖 AI/ML Engineer Profile
 - IEEE-published researcher with 2 peer-reviewed publications
@@ -68,9 +68,9 @@ Status       : Looking for reasons to hire
 - Accessible via the `analytics` command
 
 ### 🎮 Easter Eggs & Fun Commands
-- `sudo hire-me` — Recruiter-focused elevator pitch
-- `coffee` — Animated brewing sequence
-- `hack nasa` — You'll have to try it yourself
+- `sudo hire-me`  Recruiter-focused elevator pitch
+- `coffee`  Animated brewing sequence
+- `hack nasa`  You'll have to try it yourself
 
 ---
 
@@ -212,13 +212,13 @@ portfolio/
 ### Backend / Services
 | Technology | Purpose |
 |------------|---------|
-| Supabase | Analytics — visitor tracking, geolocation |
+| Supabase | Analytics  visitor tracking, geolocation |
 
 ### Architecture Highlights
-- **Virtual Filesystem (VFS)** — An in-memory tree of `DirectoryNode` / `FileNode` objects, dynamically populated from data files at startup
-- **Command Router** — A `switch` statement in `useTerminal.tsx` maps command strings to React component outputs
-- **Slug Generator** — `generateSlug()` in `fileSystem.ts` converts project names to filesystem-safe identifiers (e.g., `"ASTRA – AI Guided System"` → `astra.md`)
-- **React 18 Strict Mode Safe Animations** — Coffee animation uses `isCancelled` closure pattern to prevent double-execution
+- **Virtual Filesystem (VFS)**  An in-memory tree of `DirectoryNode` / `FileNode` objects, dynamically populated from data files at startup
+- **Command Router**  A `switch` statement in `useTerminal.tsx` maps command strings to React component outputs
+- **Slug Generator**  `generateSlug()` in `fileSystem.ts` converts project names to filesystem-safe identifiers (e.g., `"ASTRA – AI Guided System"` → `astra.md`)
+- **React 18 Strict Mode Safe Animations**  Coffee animation uses `isCancelled` closure pattern to prevent double-execution
 
 ---
 
@@ -239,7 +239,7 @@ cd portfolio
 # 2. Install dependencies
 npm install
 
-# 3. Set up environment variables (optional — for analytics)
+# 3. Set up environment variables (optional  for analytics)
 cp .env.example .env
 # Add your Supabase URL and anon key
 
@@ -251,7 +251,7 @@ The portfolio will be available at `http://localhost:5173`
 
 ### Environment Variables (Optional)
 
-Analytics are powered by Supabase. If you skip this, the `analytics` command will show an offline state — everything else works without it.
+Analytics are powered by Supabase. If you skip this, the `analytics` command will show an offline state  everything else works without it.
 
 ```env
 VITE_SUPABASE_URL=your_supabase_project_url
@@ -273,7 +273,7 @@ Switch between terminal themes using the `theme` command:
 
 | Theme | Command | Description |
 |-------|---------|-------------|
-| 🟣 Dracula | `theme dracula` | Default — purple/pink Dracula palette |
+| 🟣 Dracula | `theme dracula` | Default  purple/pink Dracula palette |
 | 🟠 Ubuntu | `theme ubuntu` | Classic Ubuntu terminal orange |
 | 🟢 Matrix | `theme matrix` | Green-on-black Matrix rain |
 | 🔵 Kali | `theme kali` | Kali Linux blue |
@@ -288,19 +288,19 @@ Most developer portfolios are forgettable. This one was built on a single princi
 
 The terminal interface forces active engagement. By the time a recruiter types `sudo hire-me` and sees the output, they've already spent more time on this portfolio than on any traditional one. That time translates to memory.
 
-The project is also a direct expression of my engineering identity — someone who builds at the intersection of AI research and software craftsmanship.
+The project is also a direct expression of my engineering identity  someone who builds at the intersection of AI research and software craftsmanship.
 
 ---
 
 ## 🔭 Future Improvements
 
-- [ ] `timeline` command — ASCII art career timeline
-- [ ] `man <command>` — Manual pages for each command
+- [ ] `timeline` command  ASCII art career timeline
+- [ ] `man <command>`  Manual pages for each command
 - [ ] `echo` command support
 - [ ] Mobile virtual keyboard for touch devices
 - [ ] `cat about.md` with rich markdown rendering
-- [ ] `research` command — dedicated publication explorer
-- [ ] Multiplayer mode — let visitors leave messages in a guestbook
+- [ ] `research` command  dedicated publication explorer
+- [ ] Multiplayer mode  let visitors leave messages in a guestbook
 - [ ] Sound effects for keypresses (opt-in)
 
 ---
@@ -327,7 +327,7 @@ Please open an issue before submitting large changes.
 
 ## 📄 License
 
-MIT License — feel free to fork and adapt for your own terminal portfolio. A star ⭐ and credit are appreciated!
+MIT License  feel free to fork and adapt for your own terminal portfolio. A star ⭐ and credit are appreciated!
 
 ---
 
