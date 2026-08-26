@@ -23,6 +23,13 @@ export const Terminal: React.FC<TerminalProps> = ({ theme, setTheme }) => {
     isExecuting,
   } = useTerminal(setTheme);
 
+  // First-glance commands for visitors who'd rather click than type.
+  const quickCommands = ['about', 'projects', 'resume', 'contact', 'help'];
+  const runQuickCommand = (cmd: string) => {
+    executeCommand(cmd);
+    inputRef.current?.focus();
+  };
+
   // Auto-scroll to bottom of the terminal on new line addition
   useEffect(() => {
     terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -181,6 +188,25 @@ export const Terminal: React.FC<TerminalProps> = ({ theme, setTheme }) => {
 
         {/* Layout Spacer */}
         <div className="w-14"></div>
+      </div>
+
+      {/* Quick Commands — no-typing path for visitors skimming quickly */}
+      <div
+        className={`flex items-center gap-1.5 overflow-x-auto scrollbar-none px-4 py-2 border-b border-white/5 select-none ${style.headerBg}`}
+      >
+        <span className="text-[10px] text-gray-500 font-mono flex-shrink-0">click:</span>
+        {quickCommands.map((cmd) => (
+          <button
+            key={cmd}
+            onClick={(e) => {
+              e.stopPropagation();
+              runQuickCommand(cmd);
+            }}
+            className={`flex-shrink-0 font-mono text-[11px] px-2.5 py-1 rounded border border-white/10 bg-white/5 hover:bg-white/10 active:scale-95 transition-all duration-100 cursor-pointer ${style.promptUser}`}
+          >
+            {cmd}
+          </button>
+        ))}
       </div>
 
       {/* Terminal Body */}

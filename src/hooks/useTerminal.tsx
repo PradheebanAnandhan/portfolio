@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { DirectoryNode, FileNode } from '../types/fs';
 import { initializeVFS, resolvePath, getNodeAtPath, generateTreeString } from '../utils/fileSystem';
-import { profile, education, experience, certifications, projects } from '../data';
+import { profile, education, experience, certifications, projects, allCommands } from '../data';
 import { HelpOutput, NeofetchOutput, SkillsOutput, ProjectsOutput, SudoHireMeOutput, CoffeeOutput, AchievementsOutput, PublicationsOutput, LearningOutput, StackOutput, ResumeSummaryOutput, ViewResumeOutput, WhoAmIOutput } from '../components/TerminalOutputs';
 import { AnalyticsOutput } from '../components/AnalyticsOutput';
 
@@ -54,7 +54,7 @@ export const useTerminal = (
             </div>
           </div>
           <div className="text-gray-500 text-xs">
-            Type <span className="text-[#50fa7b] font-bold">help</span> for all {30}+ commands.
+            Type <span className="text-[#50fa7b] font-bold">help</span> for all {allCommands.length}+ commands.
           </div>
         </div>
       )
@@ -70,21 +70,12 @@ export const useTerminal = (
   const getSuggestions = (input: string): string[] => {
     if (!input.trim()) return [];
 
-    const commands = [
-      'help', 'about', 'skills', 'projects', 'contact', 'resume',
-      'education', 'experience', 'certs', 'clear', 'whoami', 'pwd', 'ls',
-      'tree', 'neofetch', 'theme', 'sudo hire-me', 'hack nasa', 'coffee',
-      'achievements', 'publications', 'learning', 'stack', 'analytics',
-      'view resume', 'download resume', 'github', 'linkedin', 'email',
-      'history', 'date', 'status'
-    ];
-
     const parts = input.split(/\s+/);
     const cmd = parts[0].toLowerCase();
 
     // 1. Suggesting commands — return ALL prefix matches, best (shortest) first
     if (parts.length === 1) {
-      const matches = commands
+      const matches = allCommands
         .filter(c => c.startsWith(cmd) && c !== cmd)
         .sort((a, b) => a.length - b.length);
       return matches;
@@ -342,7 +333,7 @@ export const useTerminal = (
               <div className="font-mono text-sm space-y-0.5 max-h-48 overflow-y-auto">
                 {history.map((cmd, idx) => (
                   <div key={idx} className="flex">
-                    <span className="text-gray-600 w-8 text-right mr-3 flex-shrink-0">{history.length - history.length + idx + 1}</span>
+                    <span className="text-gray-600 w-8 text-right mr-3 flex-shrink-0">{idx + 1}</span>
                     <span className="text-gray-300">{cmd}</span>
                   </div>
                 ))}

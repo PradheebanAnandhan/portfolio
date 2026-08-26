@@ -7,6 +7,7 @@ export { certifications } from './certifications';
 export { achievements } from './achievements';
 export { publications } from './publications';
 export { currentlyLearning } from './currentlyLearning';
+export { commandCategories, allCommands } from './commands';
 
 export type { Profile } from './profile';
 export type { SkillGroup } from './skills';
@@ -16,3 +17,4 @@ export type { Education } from './education';
 export type { Certification } from './certifications';
 export type { Achievement } from './achievements';
 export type { Publication } from './publications';
+export type { CommandEntry, CommandCategory } from './commands';

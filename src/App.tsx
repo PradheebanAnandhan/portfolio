@@ -48,6 +48,9 @@ export const App: React.FC = () => {
           <div className="text-[10px] md:text-xs text-gray-500 font-mono mt-3 select-none text-center">
             Press <span className="text-[#8be9fd] font-bold">Tab</span> to autocomplete commands/paths | Try <span className="text-[#50fa7b] font-bold">theme matrix</span> or <span className="text-[#50fa7b] font-bold">sudo hire-me</span>
           </div>
+          <div className="text-[10px] text-gray-600 font-mono mt-1 select-none text-center">
+            Anonymous visit analytics (approximate location, no personal data) are logged — see the <span className="text-gray-500">analytics</span> command.
+          </div>
         </div>
       )}
 
